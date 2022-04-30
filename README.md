@@ -1,4 +1,4 @@
-# cherrySafe
+
 ## Config
 ```src/abi/index.js```
 ## Project setup
