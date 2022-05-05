@@ -15,7 +15,7 @@
         <div class="name">
           NFT Bank Name
         </div>
-        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Name" v-bind="nbank_name">
 
       </div>
       <div class="input-box">
@@ -108,7 +108,7 @@
         </div>
         <input type="text" placeholder="Address">
       </div>
-      <button class="operate-btn">
+      <button class="operate-btn" @click="complete()">
         Complete
       </button>
     </div>
@@ -141,6 +141,7 @@
 
 <script>
   import ConnectWallet from "../components/ConnectWallet";
+  import {mapGetters} from "vuex";
     export default {
         name: "createNFT",
         components:{
@@ -149,13 +150,24 @@
         data(){
             return {
                 imgUrl:"",
-                activeIndex:0
+                activeIndex:0,
+                nbank_name:undefined,
             }
         },
         methods:{
           jump(){
             this.$router.push({path:'/home'})
+          },
+          complete(){
+            console.log(111)
+            this.$store.dispatch("nbankFactory/creatBank", {manager:"0x341E7f37930aCa7D95dBF9c8B729951a3B3E0A2a",_bankName:"asd"})
           }
+        },
+        computed: {
+          ...mapGetters([
+              'isConnected',
+              'account'
+          ])
         }
     }
 </script>

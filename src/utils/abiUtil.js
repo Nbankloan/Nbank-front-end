@@ -11,7 +11,7 @@ const CONTRACTS = {
     NBank:{address:"0xee3b12acA7eCc34f900024e86B2b9a42d63AB329", abi:NBank},
     nbankFactory:{address:"0x1Aa203ee0C15b836E88BFe7c79BC209dA65E3202", abi:nbankFactory},
     NBT:{address:"0x5D0577Fc873f6c82f57c4e177fe57B26cde6FC6e", abi:NBT},
-    NDeposit721:{address:"0x1CC79E1457fD02E7838aF1dAe96e9CE344721890",abt:NDeposit721},
+    NDeposit721:{address:"0x5cA32386F3EB0aC1806De335d53f365ec252770F",abt:NDeposit721},
 };
 
 function getContractByName(name, web3) {
