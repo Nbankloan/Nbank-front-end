@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import app from './modules/app'
 import getters from './getters'
 import erc20Factory from "./modules/abisMethods/erc20Factory";
 import loanMarket from "./modules/abisMethods/loanMarket";
@@ -13,6 +14,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   getters,
   modules: {
+    app,
     erc20Factory,
     loanMarket,
     NBank,

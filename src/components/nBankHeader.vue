@@ -4,23 +4,7 @@
       <div class="left">
         <strong>{{$route.path.substr(1,$route.path.length)}}</strong>
       </div>
-      <div class="nav-list" v-show="multiAddress&& $route.path=='/multiSignPanel'">
-        <div class="item" :class="{'active':activeIndex==0}" @click="setActiveIndex(0)">
-          <div class="name">
-            TRANSACTIONS
-          </div>
-        </div>
-        <div class="item" :class="{'active':activeIndex==1}" @click="setActiveIndex(1)">
-          <div class="name">
-            SETTINGS
-          </div>
-        </div>
-        <div class="item" :class="{'active':activeIndex==2}" @click="setActiveIndex(2)">
-          <div class="name">
-            CreatLiquidity
-          </div>
-        </div>
-      </div>
+   
       <div class="rain-header-right">
         <ConnectWallet class="connect-wallet"></ConnectWallet>
       </div>
@@ -78,10 +62,7 @@ export default {
     sidebar() {
       return this.$store.state.app.isCollapse
     },
-    userId() {
-      // return this.$store.state.cherrySafe.userId
-      return 0
-    }
+ 
   }
 }
 </script>

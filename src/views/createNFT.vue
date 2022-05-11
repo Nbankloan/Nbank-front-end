@@ -15,7 +15,7 @@
         <div class="name">
           NFT Bank Name
         </div>
-        <input type="text" placeholder="Name" v-bind="nbank_name">
+        <input type="text" placeholder="Name" v-model="nbank_name">
 
       </div>
       <div class="input-box">
@@ -108,6 +108,9 @@
         </div>
         <input type="text" placeholder="Address">
       </div>
+      <!-- <div class="bankout">
+       <span>Bank:</span> {{this.bankAddr}}
+      </div> -->
       <button class="operate-btn" @click="complete()">
         Complete
       </button>
@@ -141,7 +144,6 @@
 
 <script>
   import ConnectWallet from "@/components/ConnectWallet";
-  import getContract from "../utils/abiUtil"
   import {mapGetters} from "vuex"
     
     export default {
@@ -153,7 +155,8 @@
             return {
                 imgUrl:"",
                 activeIndex:0,
-                nbank_name:undefined,
+                nbank_name:"",
+                bankAddr:"",
             }
         },
   computed: {
@@ -170,16 +173,25 @@
             this.$router.push({path:'/home'})
           },
           complete(){
-            console.log(getContract.getContractAddress("erc20Factory"))
-            console.log(111)
-            console.log(this.account)
-            this.$store.dispatch("nbankFactory/creatBank", {manager:0x341E7f37930aCa7D95dBF9c8B729951a3B3E0A2a,_bankName:"asd"})
+            this.$store.dispatch("nbankFactory/creatBank", {manager:this.account,_bankName:this.nbank_name}).then((res) => {
+              console.log(res)
+            })
+            // this.$store.dispatch("nbankFactory/newBank").then((res)=>{
+            //   console.log(res)
+            // })
+            // this.$store.dispatch("nbankFactory/owner").then((res) => {
+            //   console.log(res)
+            // })
           }
         }
     }
 </script>
 
 <style lang="scss" scoped>
+.bankout{
+  margin-top:50px;
+  font-size: 20px;
+}
 .createNFT{
   background: url("../static/imgs/create_bg.png");
   background-size: 100% 100%;
