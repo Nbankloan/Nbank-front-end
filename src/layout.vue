@@ -2,7 +2,7 @@
   <div :class="classObj" class="layout">
     <leftNav></leftNav>
     <div class="right-content">
-      <cherrySafeHeader/>
+      <nBankHeader/>
       <router-view id="main" class="layout-content"/>
     </div>
   </div>
@@ -10,13 +10,13 @@
 
 <script>
 
-import cherrySafeHeader from "@/components/cherrySafeHeader"
+import nBankHeader from "@/components/nBankHeader"
 import leftNav from "./components/leftNav";
 export default {
   name: "layout",
   components: {
       leftNav,
-    cherrySafeHeader,
+    nBankHeader,
 
   },
   data() {

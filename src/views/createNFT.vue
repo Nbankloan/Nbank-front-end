@@ -140,11 +140,13 @@
 </template>
 
 <script>
-  import ConnectWallet from "../components/ConnectWallet";
-  import {mapGetters} from "vuex";
+  import ConnectWallet from "@/components/ConnectWallet";
+  import getContract from "../utils/abiUtil"
+  import {mapGetters} from "vuex"
+    
     export default {
         name: "createNFT",
-        components:{
+         components:{
             ConnectWallet
         },
         data(){
@@ -154,20 +156,25 @@
                 nbank_name:undefined,
             }
         },
+  computed: {
+    ...mapGetters([
+      'isConnected',
+      'account'
+    ]),
+      account() {
+      return this.$store.state.app.account
+    },
+  },
         methods:{
           jump(){
             this.$router.push({path:'/home'})
           },
           complete(){
+            console.log(getContract.getContractAddress("erc20Factory"))
             console.log(111)
-            this.$store.dispatch("nbankFactory/creatBank", {manager:"0x341E7f37930aCa7D95dBF9c8B729951a3B3E0A2a",_bankName:"asd"})
+            console.log(this.account)
+            this.$store.dispatch("nbankFactory/creatBank", {manager:0x341E7f37930aCa7D95dBF9c8B729951a3B3E0A2a,_bankName:"asd"})
           }
-        },
-        computed: {
-          ...mapGetters([
-              'isConnected',
-              'account'
-          ])
         }
     }
 </script>

@@ -36,7 +36,7 @@ import ConnectWallet from "@/components/ConnectWallet";
 import {mapGetters} from "vuex";
 
 export default {
-  name: "cherrySafeHeader",
+  name: "nBankHeader",
   components: {
     ConnectWallet,
   },
