@@ -7,7 +7,7 @@
         <ConnectWallet></ConnectWallet>
       </div>
       <div class="header-title">
-        Create DAO NFT Bank
+        Create New Bank
       </div>
     </div>
     <div class="content">
