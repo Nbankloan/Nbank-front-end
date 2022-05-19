@@ -12,25 +12,25 @@
       <div class="all-list">
         <div class="oder" @click="activeType=2">
           <div class="name">
-            Loan list
+            Assignment list
           </div>
           <div style="display: flex">
             <div class="token-box">
               <div class="value">
-                BTC
+                NBT
               </div>
               <span>Token</span>
             </div>
             <div class="balance-box">
               <div class="value">
-                200,000
+                500,000
               </div>
               <span>Loan Amount</span>
             </div>
           </div>
           <div class="create-time">
             <div class="value">
-              2022.5.19
+              2022.5.20
             </div>
             <span>Loan Time</span>
           </div>
