@@ -34,7 +34,7 @@
             </div>
           </div>
           <div class="create-time">
-            <div class="value">
+            <div class="value"> 
               December 24, 2021
             </div>
             <span>Create Time</span>

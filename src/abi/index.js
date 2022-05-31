@@ -6,12 +6,12 @@ import NBT from "./data/NBT.json"
 import NDeposit721 from "./data/NDeposit721.json"
 
 const CONTRACTS = {
-    erc20Factory:{address:"0x465A46D9D8CA6b1defAB8d7E9599A2499Be2EDc6",abi:erc20Factory},
-    loanMarket:{address: "0xEC45605f01C5437e4120386FfB667e668049Bd3A",abi:loanMarket},
-    NBank:{address:"0x3675bb23bB50E283Cc07933cCF4F8FE9f49C92Ad", abi:NBank},
-    nbankFactory:{address:"0xdd057e4A4b23eD0a98ED4FAE19B1B23011354898", abi:nbankFactory},
-    NBT:{address:"0xE93A356Ee83a81661bee947b4c7032Fa78c27161", abi:NBT},
-    NDeposit721:{address:"0xBD0B452DD4c47A33001253c215A8Bc42650c72DE",abt:NDeposit721},
+    erc20Factory:{address:"0x56a7f24f7Ed2A8cA3B5FF54AF46c943A37a8bf50",abi:erc20Factory},
+    loanMarket:{address: "0xEb14FA64Ab89359a49fA5971e20C99b2703C9510",abi:loanMarket},
+    NBank:{address:"0xB103544C3A66E92b5328eE51f587618a4c8b3104", abi:NBank},
+    nbankFactory:{address:"0x57Cf2A0dB9D21aF9E49797c9FA68162014d52299", abi:nbankFactory},
+    NBT:{address:"0xA361dA24Db408088ee13050630E8A3cE239c07B7", abi:NBT},
+    NDeposit721:{address:"0x1c3D82f7983fE1AAC11C11cEEf735735Fc0e0C5d",abt:NDeposit721},
 };
 
 function getContractByName(name, web3) {
