@@ -20,6 +20,8 @@ yarn build
 ```
 yarn lint
 ```
-
+```
+npx hardhat init
+```
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
